@@ -1,0 +1,453 @@
+/*------------------------------------------------------------------
+[Table of contents]
+1. base
+2. start 开始页面
+3. vocab 游戏进行页面
+4. gameover,result 游戏结束区和游戏结果页
+5. share 分享界面
+-------------------------------------------------------------------*/
+
+/* =1. base
+--------------------------------------------------------------------------------------------------------*/
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+	margin:0;
+	padding: 0;
+	height:101%;
+	overflow-y:scroll;
+	font:12px/20px "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#444;
+}
+h1,h2,h3 {line-height: 40px;}
+h1,h2,h3,h4,h5,h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+a{text-decoration:none;}
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+p {margin:0;}
+label {display: block;margin-bottom: 5px;margin: 0 15px;}
+form {margin: 0 0 20px;}
+img {-ms-interpolation-mode: bicubic;}
+/*清除浮动*/
+.clearfix:before,.clearfix:after{
+  content:"";
+  display: table;
+}
+.clearfix:after{
+  height: 0;
+  clear:both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.clearfix{
+  zoom:1;/*for ie6&ie7*/
+}
+.clear{
+  clear:both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+.hide{display:none;}
+/*设置浮动，减少浮动带来的bug*/
+.left,.right{display: inline;}
+.left{  float: left;}
+.right{float:right;}
+#bg{
+	position:absolute;
+	width:100%;
+}
+#bg img{
+	width:100%;
+}
+
+/* =2. start 开始页面
+--------------------------------------------------------------------------------------------------------*/
+#start{
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow:hidden;
+}
+.titlebox{
+	position:absolute;
+	width:100%;
+	height:30%;
+	top:4%;
+}
+.titlebox .title-bg{
+	z-index:998;
+	position:absolute;
+	width:100%;
+	left:0;
+	top:42%;
+}
+.titlebox .title{
+	z-index:999;
+	position:absolute;
+	width: 187px;
+	left: 50%;
+	margin-left: -93px;
+}
+#start .animatebox{
+	z-index:999;
+	position:absolute;
+	width:100%;
+	height:25%;
+	top:37%;
+}
+#start .animatebox .tree{
+	position:absolute;
+	width:100%;
+	left:0;
+}
+#start .animatebox .tree2,#start .animatebox .tree3{
+	top:-10px;
+}
+#start .animatebox .cow{
+	position:absolute;
+	height:106px;
+	top:3%;
+	left:20%;
+}
+#start .animatebox .boy{
+	position:absolute;
+	height:93px;
+	top:20%;
+	right:15%;
+}
+.infobox{
+	z-index:998;
+	position:absolute;
+	width:100%;
+	height:47%;
+	top:52.9%;
+	bottom:0;
+}
+.infobox .ground{
+	position:absolute;
+	width:100%;
+	left:0;
+}
+.infobox .desc{
+	position:absolute;
+	width:220px;
+	left:50%;
+	top:31.25%;
+	margin-left:-110px;
+	font-size:14px;
+	font-weight:bold;
+}
+.infobox .btnbox{
+	position:absolute;
+	width:94px;
+	height:28px;
+	left:50%;
+	top:55%;
+	margin-left:-47px;
+	line-height:28px;
+}
+.infobox .btnbox .start-btn{
+	display:inline-block;
+	width:100%;
+	height:100%;
+	font-size:18px;
+	color: #ef6f01;
+	text-transform:uppercase;
+	border:2px solid #ef6f01;
+	border-radius:20px;
+	background:#fff;
+	text-align:center;
+}
+.infobox .btnbox .start-btn:active{
+	border:2px solid #ff7b0a;
+}
+.infobox .logo{
+	position:absolute;
+	width:78px;
+	height:29px;
+	left:50%;
+	bottom:8%;
+	margin-left:-39px;
+}
+
+/* =3. vocab 游戏进行页面
+--------------------------------------------------------------------------------------------------------*/
+#vocab .btnbox{
+	position:absolute;
+	width:80px;
+	height:22px;
+	left:50%;
+	top:4%;
+	margin-left:-40px;
+	font-size:15px;
+	line-height:22px;
+	color:#00a4a9;
+	text-align:center;
+	border:1px solid #00a4a9;
+	border-radius:11px;
+	background-color:#fff;
+}
+#vocab .progress{
+	position:absolute;
+	width:100%;
+	height:10px;
+	top:14.5%;
+}
+#vocab .progress .bar{
+	height:10px;
+	margin:0 17px;
+	background-color:#fff;
+}
+#vocab .progress .bar .range{
+	width:0;
+	height:10px;
+	background-color:#00a4a9;
+}
+#vocab .progress .bar .handle{
+	position:absolute;
+	width:27px;
+	height:30px;
+	top:-15px;
+	left:12px;
+}
+#vocab .progress .bar .all{
+	position:absolute;
+	width:27px;
+	height:30px;
+	top:-15px;
+	right:13px;
+}
+#vocab .progress .bar .handle img,#vocab .progress .bar .all img{
+	width:100%;
+}
+.vocabox{
+	z-index:999;
+	position:absolute;
+	width:100%;
+	top:21%;
+	color:#4c4c4c;
+}
+.vocabox .title{
+	font-size:24px;
+	text-align:center;
+}
+.vocabox .item-list li{
+	margin:14px 42px 0 42px;
+	height:36px;
+	font-size:18px;
+	line-height:36px;
+	text-align:center;
+	background:#fff;
+	border-radius:3px;
+}
+.vocabox .item-list li.success{
+	height:32px;
+	line-height:32px;
+	border:2px solid #0aabad;
+}
+.vocabox .item-list li.error{
+	height:32px;
+	line-height:32px;
+	border:2px solid #ef6f01;
+}
+#vocab .groundbox{
+	position:absolute;
+	width:100%;
+	top:59%;
+	bottom:0;
+}
+#vocab .animatebox{
+	z-index:998;
+	position:absolute;
+	width:100%;
+	top:0%;
+}
+#vocab .animatebox .tree{
+	z-index:998;
+	position:absolute;
+	width:100%;
+	top:0;
+}
+#vocab .animatebox .cow{
+	position:absolute;
+	height:106px;
+	top:3%;
+	left:20%;
+}
+#vocab .animatebox .boy{
+	position:absolute;
+	height:93px;
+	top:20%;
+	right:15%;
+}
+#vocab .groundbox .ground{
+	z-index:997;
+	position:absolute;
+	width:100%;
+	bottom:0;
+}
+
+/* =4. gameover,result 游戏结束区和游戏结果页
+--------------------------------------------------------------------------------------------------------*/
+.mask{
+	z-index:999;
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.8;
+}
+.result-bg,#gameover .animatebox,#result .animatebox{
+	z-index:999;
+	position:absolute;
+	width:207px;
+	left:50%;
+	top:12%;
+	height:64.8%;
+	margin-left:-103px;
+}
+#gameover .mumbox{
+	z-index:999;
+	position:absolute;
+	width:100%;
+	height:88px;
+	top:22px;
+}
+#gameover .mum1{
+	position:absolute;
+	width:28px;
+	height:28px;
+	left:50%;
+	top:50%;
+	margin-left:-14px;
+	margin-top:-14px;
+}
+#gameover .mum2{
+	position:absolute;
+	width:46px;
+	height:46px;
+	left:50%;
+	top:50%;
+	margin-left:-23px;
+	margin-top:-23px;
+}
+#gameover .mum3{
+	position:absolute;
+	width:88px;
+	height:88px;
+	left:50%;
+	top:50%;
+	margin-left:-44px;
+	margin-top:-44px;
+}
+#gameover .msg{
+	position:absolute;
+	width:100%;
+	top:42%;
+	font-size:14px;
+	text-align:center;
+}
+#gameover .cow{
+	position:absolute;
+	height:89px;
+	left:9%;
+	bottom:13%;
+}
+#gameover .boy{
+	position:absolute;
+	height:84px;
+	right:11%;
+	bottom:13%;
+}
+#gameover .boy1{
+	right:9%;
+}
+#gameover .boy3{
+	right:8%;
+	bottom:16.7%;
+}
+#result .title{
+	position:absolute;
+	width:100%;
+	top:8.5%;
+	font-size:14px;
+	text-align:center;
+	color:#104a56;
+}
+#result .score{
+	position:absolute;
+	width:100%;
+	top:17.9%;
+	font-size:24px;
+	text-align:center;
+	color:#fff;
+}
+#result .desc{
+	position:absolute;
+	top:30%;
+	margin:0 20px;
+	color:#00a5aa;
+}
+#result .again-btn{
+	position:absolute;
+	width:94px;
+	height:24px;
+	top:78%;
+	left:50%;
+	margin-left:-47px;
+	line-height:24px;
+	color:#fff;
+	text-align:center;
+	background-color:#00a5aa;
+	border:1px solid #0d787a;
+	border-radius:12px;
+}
+#result .btnbox{
+	position:absolute;
+	width:100%;
+	top:80%;
+}
+#result .btnbox .btn{
+	z-index:999;
+	position:absolute;
+	width:94px;
+	height:24px;
+	line-height:24px;
+	color:#fff;
+	text-align:center;
+	border-radius:12px;
+}
+#result .share-btn{
+	left:20%;
+	background-color:#0aabad;
+}
+#result .more-btn{
+	right:18%;
+	background-color:#ef6f01;
+}
+
+/* =5. share 分享界面
+--------------------------------------------------------------------------------------------------------*/
+.mask .share,.mask .more{
+	position:absolute;
+	height:45%;
+	top:5%;
+	right:15%;
+}
