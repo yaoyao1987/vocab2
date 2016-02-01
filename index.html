@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <title>
+            凶残单词测试，看看你能躲过几头牛
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    </head>
+    
+    <body>
+    	<div id="bg">
+    		<img src="img/sky.png"/>
+    	</div>
+    	<!-- 开始页面 -->
+    	<div id="start">
+    		<!-- 标题 -->
+    		<div class="titlebox">
+    			<img src="img/index/piao.png" class="title-bg"/>
+    			<img src="img/index/title.png" class="title"/>
+    		</div>
+    		<!-- 动画特效区块 -->
+    		<div class="animatebox">
+    			<img src="img/index/tree1.png" class="tree tree1"/>
+    			<img src="img/index/cow1.png" class="cow cow1"/>
+    			<img src="img/index/boy1.png" class="boy boy1"/>
+    		</div>
+    		<!-- 信息区 -->
+    		<div class="infobox">
+    			<img src="img/index/ground.png" class="ground"/>
+    			<div class="desc">史上最凶残单词量+反应速度测试！看看你能逃过几头牛</div>
+    			<div class="btnbox">
+    				<span class="btn start-btn">start</span>
+    			</div>
+    			<img src="img/index/logo.png" class="logo"/>
+    		</div>
+    	</div>
+    	<!-- 游戏做题区 -->
+    	<div id="vocab" class="hide">
+    		<div class="btnbox">第<span class="btn count">几</span>牛</div>
+    		<div class="progress">
+    			<div class="bar">
+    				<div class="range"></div>
+    				<div class="handle">
+    					<img src="img/start/cow.png"/>
+    				</div>
+    				<div class="all">
+    					<img src="img/start/boy.png"/>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="vocabox">
+    			<div class="item">
+    				<div class="title">abandon</div>
+    				<ul class="item-list">
+    					<li>放弃</li>
+	    				<li>喜欢</li>
+	    				<li>恶心</li>
+    				</ul>
+    			</div>
+    		</div>
+    		<div class="animatebox">
+    			<img src="img/index/tree1.png" class="tree tree1"/>
+    			<img src="img/index/cow1.png" class="cow cow1"/>
+    			<img src="img/index/boy1.png" class="boy boy1"/>
+    		</div>
+    		<div class="groundbox">
+    			<img src="img/start/ground.png" class="ground"/>
+    		</div>
+    	</div>
+    	<!-- 游戏结束区 -->
+    	<div id="gameover" class="hide">
+    		<div class="mask"></div>
+    		<img src="img/card.png" class="result-bg"/>
+    		<div class="animatebox">
+    			<div class="mumbox">
+    				<img src="img/gameover/mum3.png" class="num mum3"/>
+    			</div>
+    			<div class="msg">你被啃题牛捅爆了菊花</div>
+    			<img src="img/gameover/cow3.png" class="cow cow3"/>
+    			<img src="img/gameover/boy3.png" class="boy boy3"/>
+    		</div>
+    	</div>
+    	<!-- 游戏结果区 -->
+    	<div id="result" class="hide">
+    		<img src="img/result/light.png" class="mask"/>
+    		<img src="img/card.png" class="result-bg"/>
+    		<div class="animatebox">
+    			<div class="title">逃亡成绩</div>
+    			<div class="score">17头</div>
+    			<div class="desc">
+    				你成功躲过17头牛，被第18头捅爆了菊花。你击败了50%的竞争对手，快去朋友圈晒晒吧！
+    			</div>
+    			<div class="again-btn">我不服!再来一局</div>
+    		</div>
+    		<div class="btnbox">
+    			<div class="btn share-btn">Share</div>
+    			<div class="btn more-btn">More</div>
+    		</div>
+    	</div>
+    	<!-- 分享提示区 -->
+    	<div id="share" class="hide">
+    		<div class="mask">
+    			<!-- <img src="img/share.png" class="share"/> -->
+    			<img src="img/more.png" class="more"/>
+    		</div>
+    	</div>
+    	<script data-main="js/main" src="js/lib/require.js"></script>
+    </body>
+</html>
